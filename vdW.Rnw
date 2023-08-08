@@ -1,0 +1,36 @@
+<<echo=FALSE>>=
+g <- round(runif(1, 1, 3), 1)
+n <- g/28.02
+p_max <- sample(500:1000, size = 1)
+R <- 8.314
+V1 <- round((sample(1:9, size = 1))/10, 2)
+V <- V1*10^(-3)
+a <- 0.12
+b <- 42*10^(-6)
+T_max <- round((1/(n*R))*(p_max*10^3+((n^2*a)/V^2))*(V-n*b),1)
+answers <- c(T_max + 10, T_max - 10, T_max * 2)
+@
+\usepackage[utf8]{inputenc}
+\begin{question}
+En sprayflaske har et volum på \Sexpr{V1} L og inneholder \Sexpr{g} g $N_2$. Det er oppgitt at flasken tåler et indre trykk  på \Sexpr{p_max} kPa før den brister. Anta at gassen oppfører seg som en van der Waals gass og bestem hvilken temperatur flasken tåler før den brister.
+
+\begin{answerlist}
+\item \Sexpr{answers[1]}
+\item \Sexpr{answers[2]}
+\item \Sexpr{answers[3]}
+\item \Sexpr{T_max}
+\end{answerlist}
+
+\end{question}
+
+\begin{solution}
+%This part will be the comment shown in Canvas when the test has been handed in (if only 1 try is given to the student)
+--insert some solution text here--
+\end{solution}
+
+
+%% META-DATA
+%% \expoints{1} % number of points
+%% \exsolution{0001} % refers to what item in answerlist is correct
+%% \extype{schoice} % question type: single choice
+%% \exname{vdw} % name

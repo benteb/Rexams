@@ -1,0 +1,26 @@
+<<echo=FALSE>>=
+p1 <- sample(1:3, size = 1)
+p2 <- sample(6:10, size = 1)
+n <- sample(3:5, size = 1) 
+T1 <- sample(270:310, size = 1) 
+R = 8.314
+
+V1 <- (n*R*T1)/(p1*1.01325*10^5)
+V2 <- (n*R*T1)/(p2*1.01325*10^5)
+delta_V <- round(V2 - V1, 2)
+@
+
+\begin{question}
+En ideell gass (n = \Sexpr{n},00) komprimeres isotermt fra \Sexpr{p1},00 atm til \Sexpr{p2},00 atm ved \Sexpr{T1},00 K. Beregn volumendringen $\Delta V$. Oppgi svaret i $m^3$.   
+\end{question}
+
+\begin{solution}
+%This part will be the comment shown in Canvas when the test has been handed in (if only 1 try is given to the student)
+Vi bruker den ideelle gassloven (pV=nRT) til å regne ut V1 og V2, for så å regne ut delta V. \Sexpr{delta_V}
+\end{solution}
+
+%% META-DATA
+%% \exsolution{\Sexpr{delta_V}} %
+%% \extype{num} % question type: numeric
+%% \exsname{Ideell gasslov, lett (numerisk)}
+%% \expoints{1}

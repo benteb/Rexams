@@ -1,0 +1,31 @@
+<<echo=FALSE>>=
+sann <- c("Entropi i systemet øker med 5 J/K, entropi i omgivelsene minker med 3 J/K", "Entropi i systemet øker med 5 J/K, entropi i omgivelsene minker med 2 J/K", "Entropi i systemet minker med 3 J/K, entropi i omgivelsene øker med 5 J/K")
+usann <- c("Entropi i systemet minker med 5 J/K, entropi i omgivelsene øker med 5 J/K", "Entropi i systemet minker med 5 J/K, entropi i omgivelsene øker med 3 J/K", "Entropi i systemet minker med 8 J/K, entropi i omgivelsene øker med 6 J/K", "Entropi i systemet øker med 6 J/K, entropi i omgivelsene minker med 6 J/K", "Entropi i systemet minker med 6 J/K, entropi i omgivelsene øker med 5 J/K", "Entropi i systemet øker med 3 J/K, entropi i omgivelsene minker med 5 J/K", "Entropi i systemet øker med 5 J/K, entropi i omgivelsene minker med 5 J/K", "Entropi i systemet minker med 6 J/K, entropi i omgivelsene øker med 5 J/K", "Entropi i systemet øker med 3 J/K, entropi i omgivelsene minker med 5 J/K")
+correct_ans <- sample(sann, size=1)
+incorrect_ans <- sample(usann, size=3)
+@
+
+\usepackage[utf8]{inputenc}
+
+\begin{question}
+Hvilken situasjon kan oppstå i den virkelige verden?
+\begin{answerlist}
+\item \Sexpr{correct_ans}
+\item \Sexpr{incorrect_ans[1]}
+\item \Sexpr{incorrect_ans[2]}
+\item \Sexpr{incorrect_ans[3]}
+\end{answerlist}
+
+\end{question}
+
+\begin{solution}
+%This part will be the comment shown in Canvas when the test has been handed in (if only 1 try is given to the student)
+--insert some solution text here--
+\end{solution}
+
+
+%% META-DATA
+%% \exsolution{1000} % refers to what item in answerlist is correct
+%% \extype{schoice} % question type: single choice
+%% \exname{entropi} % name
+%% \expoints{1} % number of points 
